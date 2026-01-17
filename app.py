@@ -23,7 +23,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Premium Custom CSS with animations and modern design
+# Premium Custom CSS with animations, modern design, and responsiveness
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
@@ -41,6 +41,7 @@ st.markdown("""
     .block-container {
         padding: 2rem 3rem;
         max-width: 1400px;
+        margin: 0 auto;
     }
     
     /* Animated gradient background */
@@ -565,6 +566,251 @@ st.markdown("""
     
     ::-webkit-scrollbar-thumb:hover {
         background: linear-gradient(180deg, #764ba2, #667eea);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .block-container {
+            padding: 1rem 1.5rem;
+        }
+        
+        .hero-section {
+            padding: 2rem 1rem;
+            border-radius: 20px;
+        }
+        
+        .main-title {
+            font-size: 2.5rem;
+            letter-spacing: -1px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+        }
+        
+        .glass-card {
+            padding: 1.5rem;
+            border-radius: 20px;
+        }
+        
+        .metric-card {
+            padding: 1.5rem;
+            border-radius: 20px;
+        }
+        
+        .metric-card h3 {
+            font-size: 1rem;
+        }
+        
+        .metric-card .value {
+            font-size: 2.5rem;
+        }
+        
+        .metric-card .label {
+            font-size: 0.9rem;
+        }
+        
+        .stButton > button {
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 12px;
+        }
+        
+        .stTabs [data-baseweb="tab-list"] {
+            gap: 0.5rem;
+            padding: 0.8rem;
+            border-radius: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .stTabs [data-baseweb="tab"] {
+            height: 50px;
+            font-size: 1rem;
+            padding: 0 1rem;
+            border-radius: 12px;
+        }
+        
+        .stTextInput > div > div > input {
+            padding: 0.8rem;
+            font-size: 0.9rem;
+            border-radius: 12px;
+        }
+        
+        .stRadio > div {
+            padding: 0.8rem;
+            border-radius: 12px;
+        }
+        
+        .stMetric {
+            padding: 1rem;
+            border-radius: 12px;
+        }
+        
+        .stMetric label {
+            font-size: 0.9rem !important;
+        }
+        
+        .stMetric [data-testid="stMetricValue"] {
+            font-size: 1.5rem !important;
+        }
+        
+        .recommendation-card {
+            padding: 1.2rem;
+            border-radius: 15px;
+            margin: 10px 0;
+        }
+        
+        .recommendation-card h4 {
+            font-size: 1.1rem;
+        }
+        
+        .recommendation-card p {
+            font-size: 0.95rem;
+        }
+        
+        .priority-badge {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.75rem;
+        }
+        
+        .feature-card {
+            padding: 1.5rem;
+            border-radius: 20px;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .block-container {
+            padding: 1rem;
+        }
+        
+        .hero-section {
+            padding: 1.5rem 1rem;
+            border-radius: 15px;
+        }
+        
+        .main-title {
+            font-size: 2rem;
+        }
+        
+        .subtitle {
+            font-size: 1rem;
+        }
+        
+        .glass-card {
+            padding: 1rem;
+            border-radius: 15px;
+        }
+        
+        .metric-card {
+            padding: 1rem;
+            border-radius: 15px;
+        }
+        
+        .metric-card h3 {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-card .value {
+            font-size: 2rem;
+            margin: 0.5rem 0;
+        }
+        
+        .metric-card .label {
+            font-size: 0.8rem;
+        }
+        
+        .stButton > button {
+            padding: 0.7rem 1.2rem;
+            font-size: 0.9rem;
+            border-radius: 10px;
+        }
+        
+        .stTabs [data-baseweb="tab-list"] {
+            gap: 0.3rem;
+            padding: 0.5rem;
+            border-radius: 12px;
+        }
+        
+        .stTabs [data-baseweb="tab"] {
+            height: 40px;
+            font-size: 0.9rem;
+            padding: 0 0.8rem;
+            border-radius: 10px;
+        }
+        
+        .stTextInput > div > div > input {
+            padding: 0.7rem;
+            font-size: 0.85rem;
+            border-radius: 10px;
+        }
+        
+        .stRadio > div {
+            padding: 0.7rem;
+            border-radius: 10px;
+            flex-direction: column;
+        }
+        
+        .stMetric {
+            padding: 0.8rem;
+            border-radius: 10px;
+        }
+        
+        .stMetric label {
+            font-size: 0.85rem !important;
+        }
+        
+        .stMetric [data-testid="stMetricValue"] {
+            font-size: 1.2rem !important;
+        }
+        
+        .recommendation-card {
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 8px 0;
+        }
+        
+        .recommendation-card h4 {
+            font-size: 1rem;
+        }
+        
+        .recommendation-card p {
+            font-size: 0.9rem;
+        }
+        
+        .priority-badge {
+            padding: 0.3rem 0.6rem;
+            font-size: 0.7rem;
+        }
+        
+        .feature-card {
+            padding: 1.2rem;
+            border-radius: 15px;
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+    }
+    
+    /* Adjust columns for small screens */
+    @media (max-width: 768px) {
+        [data-testid="column"] {
+            margin-bottom: 1rem;
+        }
     }
 </style>
 """, unsafe_allow_html=True)
